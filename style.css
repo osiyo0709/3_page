@@ -1,0 +1,111 @@
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 63%;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background: gray;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.container .box{
+    position: relative;
+    width: 30rem;
+    height: 30rem;
+    margin: 4rem;
+}
+.container .box:hover .imgbox{
+    transform: translate(-5rem, -5rem);
+}
+.container .box:hover .content{
+    transform: translate( 5rem, 5rem);
+}
+.imgbox{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    transition: all 1s ease-in-out;
+}
+.imgbox img{
+    width: 30rem;
+    height: 30rem;
+    object-fit: cover;
+    resize: both;
+    border-radius: 20px;
+}
+.content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*padding: 0.5rem;*/
+    display: flex;
+    justify-content: center;
+    background-color: rgba(218, 216, 216, 0.541);
+    z-index: 1;
+    align-items: flex-end;
+    text-align: center;
+    transition:  1s ease-in-out;
+    border-radius: 20px;
+}
+.content h2{
+    display: block;
+    font-size: 2rem;
+    color: rgba(54, 49, 49, 0.973);
+    font-weight: 500;
+    line-height: 2rem;
+    letter-spacing: 1px;
+}
+.content span{
+    color: rgba(0, 0, 0, 0.479);
+    font-size: 1.4rem;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+}
+.content1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(206, 203, 198, 0.966);
+    z-index: 1;
+    align-items: flex-end;
+    text-align: center;
+    transition:  1s ease-in-out;
+    border-radius: 20px;
+}
+
+.content1 span{
+    color: black;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 2rem;
+    letter-spacing: 1px;
+}
+.container .box:hover .content1{
+    transform: translate( 10rem, 10rem);
+}
